@@ -13,6 +13,7 @@ The process begins by scaling down the bounding box of the input drawing to a si
 ## Pre-Trained Model in web version
 
 The neural network model used in this project is pre-trained using the MNIST dataset, following the same instructions as the MNIST training data. The model has learned to recognize handwritten digits based on this training.
+More information about MNIST database and recent files can be obtained from [here](http://yann.lecun.com/exdb/mnist/).
 
 ## Usage
 
