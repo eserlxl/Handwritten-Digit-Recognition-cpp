@@ -45,6 +45,8 @@ int main (int argc, char** argv)
         printf("Could not load the MNIST data!\n");
         return 1;
     }
+
+    printf("\nInitial test data accuracy: %0.6f%%\n\n", 100.0f*GetDataAccuracy(g_testData));
  
     #if REPORT_ERROR_WHILE_TRAINING()
     FILE *file = fopen("Error.csv","w+t");
