@@ -1,3 +1,5 @@
+### !!! DEVELOPMENT WILL BE CONTINUED ON [NEW REPO](https://github.com/eserlxl/hdr-nn) DUE TO ARCHITECTURE CHANGE !!!
+
 # Handwritten Digit Recognition Neural Network с++
 
 This C++ project implements a neural network for handwritten digit recognition. The network architecture consists of three layers with 785, 30, and 10 neurons respectively.
