@@ -10,16 +10,24 @@
 #include <vector>
 #include <algorithm>
 
+#define NO_RANDOMIZATION // Only for testing the algorithm, we need the same results for each run to compare.
+
 template <size_t inputs, size_t hidden_neurons, size_t output_neurons>
 class NeuralNetwork
 {
 public:
+    std::random_device rd;
+    std::mt19937 e2;
+
     NeuralNetwork ()
     {
         /* Set the initial weights and biases to random numbers drawn from a 
         Gaussian distribution with a mean of 0 and standard deviation of 1.0 */
-        std::random_device rd;
-        std::mt19937 e2(rd());
+#ifdef NO_RANDOMIZATION
+        e2.seed(1);
+#else
+        e2.seed(rd());
+#endif
         std::normal_distribution<float> dist(0, 1);
  
         for (float& f : m_hiddenLayerBiases)
@@ -48,10 +56,10 @@ public:
                 ++index;
             }
         }
-        static std::random_device rd;
-        static std::mt19937 e2(rd());
+#ifndef NO_RANDOMIZATION
+        e2.seed(rd());
+#endif
         std::shuffle(m_trainingOrder.begin(), m_trainingOrder.end(), e2);
- 
         // Process all minibatches until we are out of training examples
         size_t trainingIndex = 0;
         while (trainingIndex < trainingData.NumImages())
