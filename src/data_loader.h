@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _DATA_LOADER_H_
+#define _DATA_LOADER_H_
 
 #include <iostream>
 #include <vector>
@@ -127,3 +128,4 @@ private:
     uint8_t* m_pixels;
     std::vector<float> m_pixelsFloat;
 };
+#endif // _DATA_LOADER_H_

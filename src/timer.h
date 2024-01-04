@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _TIMER_H_
+#define _TIMER_H_
 #include <iostream>
 #include <chrono>
 
@@ -19,3 +20,4 @@ struct Timer
     std::chrono::high_resolution_clock::time_point m_start;
     const char* m_label;
 };
+#endif //_TIMER_H_
