@@ -10,8 +10,8 @@
 The Inline specifier improves program performance by reducing the overhead of function calls and increasing execution speed. */
 inline uint32_t EndianSwap (uint32_t a)
 {
-    return (a<<24) | ((a<<8) & 0x00ff0000) |
-           ((a>>8) & 0x0000ff00) | (a>>24);
+    uint32_t b=8,c=24,d=0x00ff0000, e= 0x0000ff00;
+    return (a<c) | ((a<<b) & d) |((a>>b) & e) | (a>>c);
 }
  
 class MNISTData
