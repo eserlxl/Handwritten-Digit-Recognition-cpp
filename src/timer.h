@@ -4,7 +4,7 @@
 
 struct Timer
 {
-    Timer (const char* label)
+    explicit Timer (const char* label)
     {
         m_start = std::chrono::high_resolution_clock::now();
         m_label = label;

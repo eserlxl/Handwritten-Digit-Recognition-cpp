@@ -1,9 +1,9 @@
 #pragma once
 
 #include <iostream>
-#include <stdio.h>
-#include <stdint.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdint>
+#include <cstdlib>
 #include <random>
 #include <array>
 #include <vector>
