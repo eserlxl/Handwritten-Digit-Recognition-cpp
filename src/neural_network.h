@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _NN_H_
+#define _NN_H_
 
 #include <iostream>
 #include <cstdio>
@@ -245,3 +246,4 @@ private:
     // Used for minibatch generation
     std::vector<size_t>                                 m_trainingOrder;
 };
+#endif // _NN_H_
