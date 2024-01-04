@@ -89,7 +89,7 @@ int main (int argc, char** argv)
  
     // Write out the final weights and biases as JSON for use in the web demo
     {
-        FILE* file = fopen("WeightsBiasesJSON.txt", "w+t");
+        FILE* file = fopen("WeightsBiases.json", "w+t");
         fprintf(file, "{\n");
  
         // network structure
