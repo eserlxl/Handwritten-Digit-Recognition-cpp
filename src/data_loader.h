@@ -31,7 +31,7 @@ public:
         m_imageCount = training ? 60000 : 10000;
  
         // Read labels
-        const char* labelsFileName = training ? "train-labels.idx1-ubyte" : "t10k-labels.idx1-ubyte";
+        const char* labelsFileName = training ? "../data/train-labels.idx1-ubyte" : "../data/t10k-labels.idx1-ubyte";
         FILE* file = fopen(labelsFileName,"rb");
         if (!file)
         {
@@ -46,7 +46,7 @@ public:
         fclose(file);
  
         // Read images
-        const char* imagesFileName = training ? "train-images.idx3-ubyte" : "t10k-images.idx3-ubyte";
+        const char* imagesFileName = training ? "../data/train-images.idx3-ubyte" : "../data/t10k-images.idx3-ubyte";
         file = fopen(imagesFileName, "rb");
         if (!file)
         {
